@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dba16f0566e774d42ac97ecfbc0e8381
+guid: 15d29aab312c9439b974f3de9c2ea7ad
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -471,10 +471,10 @@ TextureImporter:
       name: idle_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 44
-        width: 162
-        height: 161
+        x: 50
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,10 +492,10 @@ TextureImporter:
       name: idle_1
       rect:
         serializedVersion: 2
-        x: 214
-        y: 44
-        width: 162
-        height: 161
+        x: 213
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,9 +514,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 376
-        y: 44
-        width: 162
-        height: 161
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,10 +534,10 @@ TextureImporter:
       name: idle_3
       rect:
         serializedVersion: 2
-        x: 538
-        y: 44
-        width: 162
-        height: 161
+        x: 539
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,10 +555,10 @@ TextureImporter:
       name: idle_4
       rect:
         serializedVersion: 2
-        x: 700
-        y: 44
-        width: 162
-        height: 161
+        x: 702
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,10 +576,10 @@ TextureImporter:
       name: idle_5
       rect:
         serializedVersion: 2
-        x: 862
-        y: 44
-        width: 162
-        height: 161
+        x: 865
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -597,10 +597,10 @@ TextureImporter:
       name: idle_6
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 44
-        width: 162
-        height: 161
+        x: 1028
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,10 +618,10 @@ TextureImporter:
       name: idle_7
       rect:
         serializedVersion: 2
-        x: 1186
-        y: 44
-        width: 162
-        height: 161
+        x: 1191
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -639,10 +639,10 @@ TextureImporter:
       name: idle_8
       rect:
         serializedVersion: 2
-        x: 1348
-        y: 44
-        width: 162
-        height: 161
+        x: 1354
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,10 +660,10 @@ TextureImporter:
       name: idle_9
       rect:
         serializedVersion: 2
-        x: 1510
-        y: 44
-        width: 162
-        height: 161
+        x: 1517
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,10 +681,10 @@ TextureImporter:
       name: idle_10
       rect:
         serializedVersion: 2
-        x: 1672
-        y: 44
-        width: 162
-        height: 161
+        x: 1680
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,10 +702,10 @@ TextureImporter:
       name: idle_11
       rect:
         serializedVersion: 2
-        x: 1834
-        y: 44
-        width: 162
-        height: 161
+        x: 1843
+        y: 43
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
