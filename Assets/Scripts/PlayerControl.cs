@@ -6,6 +6,8 @@ public class PlayerControl : MonoBehaviour
 {
 
     Rigidbody2D playerRB;
+    Animator playerAnimator;
+
     public float moveSpeed = 1f;
 
     bool facingRight = true;
@@ -19,7 +21,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
-
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class PlayerControl : MonoBehaviour
     void HorizontalMove()
     {
         playerRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, playerRB.velocity.y);
+        playerAnimator.SetFloat("playerSpeed", Mathf.Abs(playerRB.velocity.x));
     }
 
     void FlipFace()
