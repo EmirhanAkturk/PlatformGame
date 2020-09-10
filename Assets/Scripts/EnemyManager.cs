@@ -29,6 +29,11 @@ public class EnemyManager : MonoBehaviour
             other.GetComponent<PlayerManager>().GetDamage(damage);
 
         }
+        else if(other.tag == "Bullet")
+        {
+            GetDamage(other.GetComponent<BulletManager>().bulletDamage);
+            Destroy(other.gameObject);
+        }
     }
 
     /*
@@ -45,4 +50,27 @@ public class EnemyManager : MonoBehaviour
             colliderBusy = false;
         }
     }
+
+    public void GetDamage(float damage)
+    {
+        if ((health - damage) >= 0)
+        {
+            health -= damage;
+        }
+        else
+        {
+            health = 0;
+        }
+
+        AmIDead();
+    }
+
+    void AmIDead()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
