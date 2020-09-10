@@ -6,6 +6,7 @@ public class CameraManager : MonoBehaviour
 {
     public Transform target;
 
+
     public float cameraSpeed;
     // Start is called before the first frame update
     void Start()
