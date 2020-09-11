@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -10,11 +11,16 @@ public class PlayerManager : MonoBehaviour
 
     Transform muzzle;
 
-    public Transform bullet;
+    public Transform bullet, floatingText;
+
+    public Slider slider;
+
     // Start is called before the first frame update
     void Start()
     {
         muzzle = transform.GetChild(1);
+        slider.maxValue = health;
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -28,6 +34,8 @@ public class PlayerManager : MonoBehaviour
 
     public void GetDamage(float damage)
     {
+        Instantiate(floatingText, transform.position, Quaternion.identity).GetComponent<TextMesh>().text = damage.ToString();
+
         if( (health - damage) >= 0)
         {
             health -= damage;
@@ -36,6 +44,8 @@ public class PlayerManager : MonoBehaviour
         {
             health = 0;
         }
+
+        slider.value = health;
 
         AmIDead();
     }

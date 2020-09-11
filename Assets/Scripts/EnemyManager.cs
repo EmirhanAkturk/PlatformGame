@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class EnemyManager : MonoBehaviour
 
     bool colliderBusy = false;
 
+    public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        
+        slider.maxValue = health;
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -62,6 +65,7 @@ public class EnemyManager : MonoBehaviour
             health = 0;
         }
 
+        slider.value = health;
         AmIDead();
     }
 
