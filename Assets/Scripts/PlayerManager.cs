@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-    public float health, bulletSpeed;
+    public float health, bulletSpeed, fireFrequency = 1f, nextFireTime;
 
     bool dead = false;
 
@@ -14,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     public Transform bullet, floatingText;
 
     public Slider slider;
+
+    bool mauseIsNotOverUI;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +29,14 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)){
+        mauseIsNotOverUI = EventSystem.current.currentSelectedGameObject == null;
+        
+        if (Input.GetMouseButton(0) && mauseIsNotOverUI && (nextFireTime < Time.timeSinceLevelLoad))
+        {
+            nextFireTime = Time.timeSinceLevelLoad + fireFrequency;
 
             ShootBullet();
+            
         }
     }
 
@@ -63,6 +71,7 @@ public class PlayerManager : MonoBehaviour
         Transform tempBullet;
         tempBullet = Instantiate(bullet, muzzle.position, Quaternion.identity);
         tempBullet.GetComponent<Rigidbody2D>().AddForce(muzzle.forward * bulletSpeed);
+        DataManager.Instance.ShotBullet++;
     }
 
 }
