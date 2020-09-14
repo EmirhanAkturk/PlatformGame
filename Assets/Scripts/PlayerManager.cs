@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
 
     Transform muzzle;
 
-    public Transform bullet, floatingText;
+    public Transform bullet, floatingText, bloodParticle;
 
     public Slider slider;
 
@@ -62,7 +62,10 @@ public class PlayerManager : MonoBehaviour
     {
         if(health <=0)
         {
+            Destroy(Instantiate(bloodParticle, transform.position, Quaternion.identity),3f);
+            DataManager.Instance.LoseProcess();
             dead = true;
+            Destroy(gameObject);
         }
     }
 

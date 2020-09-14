@@ -60,6 +60,7 @@ public class DataManager : MonoBehaviour
         {
             enemyKilled = value;
             GameObject.Find("EnemyKilledText").GetComponent<Text>().text = "ENEMY KILLED: " + enemyKilled.ToString();
+            WinProcess();
         }
     }
 
@@ -89,4 +90,17 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    public void WinProcess()
+    {
+        if(enemyKilled >= 5)
+        {
+            print("YOU WON!!");
+        }
+
+    }
+
+    public void LoseProcess()
+    {
+        print("YOU LOST!!");
+    }
 }

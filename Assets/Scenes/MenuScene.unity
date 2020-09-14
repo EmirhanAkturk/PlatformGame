@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067c4446988e74d41a4d28b22ba3e292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalShotBUllet: 0
+  totalShotBullet: 0
   totalEnemyKilled: 0
 --- !u!4 &1558043195
 Transform:
