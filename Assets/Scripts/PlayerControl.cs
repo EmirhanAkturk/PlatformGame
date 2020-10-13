@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PlayerControl : MonoBehaviour
             FlipFace();
         }
 
-        if(Input.GetAxis("Vertical")>0 && isGrounded && (nextJumpTime < Time.timeSinceLevelLoad)){
+        if(CrossPlatformInputManager.GetButtonDown("Jump") && isGrounded && (nextJumpTime < Time.timeSinceLevelLoad)){
             nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
             Jump();
         }
@@ -57,7 +58,7 @@ public class PlayerControl : MonoBehaviour
 
     void HorizontalMove()
     {
-        playerRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, playerRB.velocity.y);
+        playerRB.velocity = new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal") * moveSpeed, playerRB.velocity.y);
         playerAnimator.SetFloat("playerSpeed", Mathf.Abs(playerRB.velocity.x));
     }
 

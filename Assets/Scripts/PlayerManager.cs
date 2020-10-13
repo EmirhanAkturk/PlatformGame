@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class PlayerManager : MonoBehaviour
     {
         mauseIsNotOverUI = EventSystem.current.currentSelectedGameObject == null;
         
-        if (Input.GetMouseButton(0) && mauseIsNotOverUI && (nextFireTime < Time.timeSinceLevelLoad))
+        if (CrossPlatformInputManager.GetButtonDown("Fire") && (nextFireTime < Time.timeSinceLevelLoad))
         {
             nextFireTime = Time.timeSinceLevelLoad + fireFrequency;
 
